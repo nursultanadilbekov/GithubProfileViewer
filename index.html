@@ -5,18 +5,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GitHub Profile Viewer</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
-<h1>GitHub Profile Viewer</h1>
-<div class="container">
-    <label for="username">Enter GitHub username:</label>
-    <input type="text" id="username" />
-    <button onclick="fetchGitHubData()">Search</button>
-    <div class="centered-content" id="fetchedData">
-        <div id="profile"></div>
+    <h1>GitHub Profile Viewer</h1>
+    <div class="container">
+        <!-- User Input Section -->
+        <div class="search-container">
+            <div>
+                <label for="username">Enter GitHub username:</label>
+                <input type="text" id="username" placeholder="GitHub Username" />
+            </div>
+            <button onclick="fetchGitHubData()">Search</button>
+        </div>
+
+        <!-- Language Filter Dropdown -->
+        <div class="search-container">
+            <label for="languageFilter">Filter by Language:</label>
+            <select id="languageFilter" onchange="filterRepositories()">
+                <option value="all">All Languages</option>
+            </select>
+        </div>
+
+        <!-- Profile Section -->
+        <div class="profile-section">
+            <div id="profile"></div>
+            <div id="languageChartContainer">
+                <label>Language Distribution</label>
+                <canvas id="languageChart" width="400" height="200"></canvas>
+            </div>
+        </div>
+
+        <!-- Repositories Section -->
         <div id="repos"></div>
+
+        <!-- Pagination Section -->
+        <div id="pagination"></div>
     </div>
-</div>
-<script src="github-profile.js"></script>
+
+    <!-- Script linking to external JavaScript file -->
+    <script src="github-profile.js"></script>
 </body>
 </html>

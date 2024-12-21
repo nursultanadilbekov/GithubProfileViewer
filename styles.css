@@ -1,93 +1,107 @@
 body {
-    font-family: 'Roboto', Arial, sans-serif;
-    line-height: 1.8;
-    margin: 0;
-    padding: 0;
-    background: linear-gradient(135deg, #f0f4f8, #d9e6f2);
-    color: #333;
-  }
-  
-  h1 {
-    text-align: center;
-    margin: 40px 0;
-    font-size: 2rem;
-    color: #2c3e50;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
-  }
-  
-  .container {
-    max-width: 700px;
-    margin: 40px auto;
-    padding: 25px;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  
-  .container:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-  }
-  
-  label {
-    display: block;
-    margin-bottom: 8px;
-    font-weight: bold;
-    color: #34495e;
-  }
-  
-  input[type="text"] {
-    width: 100%;
-    padding: 12px;
-    font-size: 16px;
-    border: 1px solid #bdc3c7;
-    border-radius: 6px;
-    margin-bottom: 20px;
-    transition: border-color 0.3s ease;
-  }
-  
-  input[type="text"]:focus {
-    border-color: #3498db;
-    outline: none;
-    box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
-  }
-  
-  button {
-    padding: 12px 25px;
-    font-size: 16px;
-    background: linear-gradient(135deg, #4CAF50, #2e7d32);
-    color: #fff;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: background 0.3s ease, transform 0.2s ease;
-  }
-  
-  button:hover {
-    background: linear-gradient(135deg, #45a049, #1b5e20);
-    transform: scale(1.05);
-  }
-  
-  button:active {
-    transform: scale(1);
-  }
-  
-  #profile, #repos {
-    margin-top: 30px;
-  }
-  
-  #repos div {
-    border: 1px solid #bdc3c7;
-    padding: 15px;
-    border-radius: 8px;
-    margin-bottom: 15px;
-    background: #f7f9fa;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: box-shadow 0.3s ease;
-  }
-  
-  #repos div:hover {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  }
-  
+  font-family: 'Roboto', Arial, sans-serif;
+  line-height: 1.8;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #f0f4f8, #d9e6f2);
+  color: #333;
+}
+
+h1 {
+  text-align: center;
+  margin: 40px 0;
+  font-size: 2rem;
+  color: #2c3e50;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 25px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #34495e;
+}
+
+input[type="text"], select {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #bdc3c7;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="text"]:focus, select:focus {
+  border-color: #3498db;
+  outline: none;
+  box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+}
+
+select {
+  background-color: #f7f9fa;
+  color: #34495e;
+  cursor: pointer;
+  appearance: none;
+}
+
+select:hover {
+  border-color: #2e7d32;
+}
+
+select::placeholder {
+  color: #bdc3c7;
+}
+
+button {
+  padding: 12px 25px;
+  font-size: 16px;
+  background: linear-gradient(135deg, #4CAF50, #2e7d32);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background: linear-gradient(135deg, #45a049, #1b5e20);
+  transform: scale(1.05);
+}
+
+button:active {
+  transform: scale(1);
+}
+
+#profile, #repos {
+  margin-top: 30px;
+}
+
+#repos div {
+  border: 1px solid #bdc3c7;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  background: #f7f9fa;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+#repos div:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
